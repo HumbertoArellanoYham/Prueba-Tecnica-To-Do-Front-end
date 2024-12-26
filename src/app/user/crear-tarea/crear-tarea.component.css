@@ -1,0 +1,51 @@
+.stylecard {
+    width: 50%;
+    height: 65%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.row-data-task {
+    height: 220px;
+}
+
+.pendiente-task {
+    margin-left: 55%;
+}
+
+.textarea-style {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.textarea-style textarea {
+    height: 100px;
+    resize: none;
+}
+
+.style-button-add {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-agregar {
+    width: 30%;
+}
+
+.rango-fechas {
+    text-align: center;
+}
+
+.rango-fechas h3 {
+    padding-top: 10px;
+    text-align: left;
+}
+
+.fecha-inicio {
+    margin-right: 10%;
+}

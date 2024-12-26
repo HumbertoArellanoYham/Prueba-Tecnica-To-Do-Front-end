@@ -1,0 +1,22 @@
+.card-style {
+    width: 70%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-center {
+    display: flex;
+    justify-content: center;
+}
+
+.example-button-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-list {
+    margin-top: 10%;
+}

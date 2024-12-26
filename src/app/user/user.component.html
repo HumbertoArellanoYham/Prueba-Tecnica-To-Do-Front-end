@@ -1,0 +1,41 @@
+<mat-grid-list cols="2" rowHeight="2:1" class="grid-list">
+    <mat-grid-tile>
+        <mat-card appearance="outlined" class="card-style">
+            <mat-card-content>
+                <h2>Agregar tarea</h2>
+                <div class="imagen-center">
+                    <img src="../../assets/Images/agregar-tarea.png" width="100px" height="100px">
+                </div>
+
+                <div class="example-button-container">
+                    <button mat-fab extended (click)="nuevaTarea()">
+                      <mat-icon>add_task</mat-icon>
+                      Nueva tarea 
+                    </button>
+                  </div>
+
+            </mat-card-content>
+        </mat-card>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card appearance="outlined" class="card-style">
+            <mat-card-content>
+                <h2>Lista de tareas pendientes</h2>
+                <div class="imagen-center">
+                    <img src="../../assets/Images/lista-de-verificacion.png" width="100px" height="100px">
+                </div>
+
+
+                <div class="example-button-container">
+                    <button mat-fab extended (click)="administrarTareas()">
+                      <mat-icon>view_list</mat-icon>
+                        Tareas pendientes
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </mat-grid-tile>
+</mat-grid-list>
