@@ -1,1 +1,40 @@
-<p>administrar-tarea works!</p>
+<div class="container">
+    <div class="col">
+        <div class="row contenedor-tareas">
+
+            <div class="lista-pendientes">
+                <form [formGroup]="modificarTarea">
+                    <mat-expansion-panel>
+
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Hacer tarea de la universidad </mat-panel-title>
+
+                            <mat-panel-description>
+                                 Resolver los 10 ejercicios pendientes de la maestras Elena
+                                <mat-icon>assignment</mat-icon>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        
+                        <div class="data-task">
+                            <mat-checkbox class="" formControlName="tareacompletada">Tarea completada</mat-checkbox>
+                            <button mat-flat-button color="accent" class="actualizar-boton">Actualizar</button>
+                            <button mat-flat-button color="primary" class="eliminar-boton">Eliminar</button>
+                        </div>
+
+                        <mat-divider></mat-divider>
+
+                        <div class="task-information">
+                            <p>Tarea activa: 3 dias</p>
+                            <p>Dias para terminar: 5 dias</p>
+                            <p>Dias para completar la tarea: 10 dias</p>
+                        </div>
+
+                    </mat-expansion-panel>
+                </form>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
