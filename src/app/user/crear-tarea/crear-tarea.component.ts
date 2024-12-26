@@ -40,7 +40,11 @@ export class CrearTareaComponent {
   private formBuilder = inject(FormBuilder);
 
   nuevaTarea = this.formBuilder.group({
-
+    nombre: ['', [Validators.required]],
+    pendiente: [{value: false, disabled: false}],
+    descripcion: ['', [Validators.required]],  
+    fechainicio: [{value: '', disabled: false}, [Validators.required]],
+    fechafin: [{value: '', disabled: false}, [Validators.required]]
   });
 
   constructor(){}

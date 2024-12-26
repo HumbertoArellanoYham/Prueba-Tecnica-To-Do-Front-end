@@ -10,15 +10,15 @@
                     <div class="row-data-task">
                         <mat-form-field appearance="outline">
                             <mat-label>Nombre</mat-label>
-                            <input matInput placeholder="Nombre de la tarea">
+                            <input matInput placeholder="Nombre de la tarea" formControlName="nombre">
                             <mat-hint>Escribe un titulo breve</mat-hint>
                         </mat-form-field>
                         
-                        <mat-checkbox class="pendiente-task">Pendiente</mat-checkbox>
+                        <mat-checkbox class="pendiente-task" formControlName="pendiente">Pendiente</mat-checkbox>
 
                         <mat-form-field appearance="outline" class="textarea-style">
                             <mat-label>Tarea a realizar</mat-label>
-                            <textarea matInput></textarea>
+                            <textarea matInput formControlName="descripcion"></textarea>
                         </mat-form-field>
                     </div>
 
@@ -27,7 +27,7 @@
 
                         <mat-form-field class="fecha-inicio">
                             <mat-label>Fecha de inicio</mat-label>
-                            <input matInput [matDatepicker]="picker">
+                            <input matInput [matDatepicker]="picker" formControlName="fechainicio">
                             <mat-hint>MM/DD/YYYY</mat-hint>
                             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
@@ -35,23 +35,25 @@
 
                         <mat-form-field class="fecha-fin">
                             <mat-label>Fecha a terminar</mat-label>
-                            <input matInput [matDatepicker]="picker2">
+                            <input matInput [matDatepicker]="picker2" formControlName="fechafin">
                             <mat-hint>MM/DD/YYYY</mat-hint>
                             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
                             <mat-datepicker #picker2></mat-datepicker>
                           </mat-form-field>
                     </div>
 
-                    <div class="style-button-add">
-                        <button mat-fab extended color="primary" class="boton-agregar">
-                            <mat-icon>task_alt</mat-icon>
-                            Agregar
-                        </button>
-                    </div>
                 </form>
+
+                <div class="style-button-add">
+                    <button mat-fab extended color="primary" class="boton-agregar">
+                        <mat-icon>task_alt</mat-icon>
+                        Agregar
+                    </button>
+                </div>
 
             </mat-card-content>
           </mat-card> 
+
     </mat-grid-tile>
   </mat-grid-list>
   

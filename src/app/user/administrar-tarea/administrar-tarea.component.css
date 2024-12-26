@@ -1,0 +1,21 @@
+.contenedor-tareas {
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.lista-pendientes {
+    width: 60%;
+}
+
+.data-task { 
+    margin-bottom: 10px;
+}
+
+.actualizar-boton {
+    margin-left: 40%;
+    margin-right: 20px;
+}
+
+.task-information { 
+    margin-top: 10px;
+}
