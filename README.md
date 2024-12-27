@@ -1,4 +1,4 @@
- <h1 align="center"> Aplicación ToDo que permita a los usuarios crear y administrar tareas pendientes </h1>
+ <h1 align="center"> Aplicación ToDo que permite a los usuarios crear y administrar tareas pendientes </h1>
 
  ## Frontend basado en componentes: Tecnologías utilizadas
   * Angular 17
