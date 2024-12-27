@@ -95,9 +95,9 @@ Sin embargo se tiene que tomar en cuenta el costo asociado
 1.- Clonar el desarrollo
   * git clone https://github.com/HumbertoArellanoYham/Prueba-Tecnica-To-Do-Front-end
 
-  Clonara el proyecto en una archivo comprimido
+  Clonara el proyecto en una carpeta
 
-2.- Descomprimir el archivo y abrir la carpeta en visual studio code se requiere instalar:
+2.- Abrir la carpeta en visual studio code se requiere instalar:
   * Node
   * Angular
   * TypeScript
@@ -105,7 +105,7 @@ Sin embargo se tiene que tomar en cuenta el costo asociado
   Node si se tiene que instalar desde la terminal es realmente sencillo.
   Angular y TypeScript solo buscando las extensiones en visual studio code
 
-3.- Para terminar abrir terminar en el proyecto y ejecutar el comando:
+3.- Para terminar abrir terminal en el proyecto y ejecutar el comando:
   *  ng serve
 
 Listo ahora se esta ejecutando el proyecto localmente en el puerto 4200, pero esto es solo el frontend, 
