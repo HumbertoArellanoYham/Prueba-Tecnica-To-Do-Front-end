@@ -1,6 +1,6 @@
 .stylecard {
-    width: 50%;
-    height: 65%;
+    width: 60%;
+    height: 75%;
 }
 
 h2 {
@@ -34,7 +34,7 @@ h2 {
 }
 
 .boton-agregar {
-    width: 30%;
+    margin: 40px;
 }
 
 .rango-fechas {

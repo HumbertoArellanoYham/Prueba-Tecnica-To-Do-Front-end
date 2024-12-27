@@ -9,36 +9,41 @@
             <div class="lista-pendientes">
                 @for (taskObjects of listaDeTodasLasTareasPendientes; track $index) {
 
-                <form [formGroup]="modificarTarea">
                     <mat-expansion-panel class="expansion">
 
                         <mat-expansion-panel-header>
                             <mat-panel-title> {{taskObjects.nombre}}</mat-panel-title>
 
                             <mat-panel-description>
-                                 {{taskObjects.description}}
+                                Tarea activa desde: {{taskObjects.fechaInicio}}
                                 <mat-icon>assignment</mat-icon>
                             </mat-panel-description>
                         </mat-expansion-panel-header>
 
                         
                         <div class="data-task">
-                            <mat-checkbox class="" formControlName="tareacompletada">Tarea completada</mat-checkbox>
-                            <button mat-flat-button color="accent" class="actualizar-boton">Actualizar</button>
-                            <button mat-flat-button color="primary" class="eliminar-boton">Eliminar</button>
+                            @if (taskObjects.tareaCompletada == true) {
+                                <mat-checkbox [disabled]="checkBoxControl" checked="true">Tarea completada</mat-checkbox>
+                            } @else{
+                                <mat-checkbox [disabled]="checkBoxControl" checked="false">Tarea completada</mat-checkbox>
+                            } 
                         </div>
 
                         <mat-divider></mat-divider>
 
+                        <div class="detalles-task">
+                            <p class="detalles-parrafo">{{taskObjects.description}}</p>
+                        </div>
+
                         <div class="task-information">
-                            <p>Tarea activa desde: {{taskObjects.fechaInicio}}<p>
-                            <p>Finalización de la tarea: {{taskObjects.fechaFin}}</p>
-                            <p class="completar-dias">Tiempo para completar la tarea:   {{ calcularDiasParaCompletar(taskObjects.fechaInicio, taskObjects.fechaFin) }} dias</p>
+                            <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Cutest dog breeds">
+                                <mat-chip-option>Finalización de la tarea: {{taskObjects.fechaFin}}</mat-chip-option>
+                                <mat-chip-option selected>Tiempo para completar la tarea: {{ calcularDiasParaCompletar(taskObjects.fechaInicio, taskObjects.fechaFin) }} dias</mat-chip-option>
+                            </mat-chip-listbox>
                         </div>
 
                     </mat-expansion-panel>
 
-                </form>
                 }
             </div>
             

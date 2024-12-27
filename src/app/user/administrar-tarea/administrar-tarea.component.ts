@@ -17,6 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import {MatListModule} from '@angular/material/list';
+import {MatChipsModule} from '@angular/material/chips';
 
 // Interfaces
 import {Tareas} from '../../core/interfaces/tareas';
@@ -45,20 +46,17 @@ import Swal from 'sweetalert2';
     MatExpansionModule,
     MatDividerModule,
     MatListModule,
-    CommonModule
+    CommonModule,
+    MatChipsModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './administrar-tarea.component.html',
   styleUrl: './administrar-tarea.component.css'
 })
 export class administrartareacomponent implements OnInit{
-  private formBuilder = inject(FormBuilder);
-
   listaDeTodasLasTareasPendientes: Tareas[] = []; 
 
-  modificarTarea = this.formBuilder.group({
-    tareacompletada: [{value: false, disabled: false}],
-  });
+  checkBoxControl = false;
 
   constructor(private taskService: TasksService) {}
 
@@ -71,7 +69,14 @@ export class administrartareacomponent implements OnInit{
 
   lista(){
     console.log("Mostrando Lista");
+  } 
+  
+  // Operaciones para las tareas pendientes
+  actualizarTareaCompletada(){
+
   }
+
+  eliminarTareaPendiente(){}
 
   // Método para calcular los días entre la fecha de inicio y fin
   calcularDiasParaCompletar(fechaInicio: string, fechaFin: string): number {
@@ -84,5 +89,4 @@ export class administrartareacomponent implements OnInit{
     
     return dias;  
   }
-
 }

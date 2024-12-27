@@ -10,11 +10,12 @@
                     <div class="row-data-task">
                         <mat-form-field appearance="outline">
                             <mat-label>Nombre</mat-label>
-                            <input matInput placeholder="Nombre de la tarea" formControlName="nombre">
+                            <input matInput placeholder="Nombre de la tarea" formControlName="nombre"
+                            (keyup)="verificarTarea($event)">
                             <mat-hint>Escribe un titulo breve</mat-hint>
                         </mat-form-field>
                         
-                        <mat-checkbox class="pendiente-task" formControlName="pendiente">Pendiente</mat-checkbox>
+                        <mat-checkbox class="pendiente-task" formControlName="pendiente">Completada</mat-checkbox>
 
                         <mat-form-field appearance="outline" class="textarea-style">
                             <mat-label>Tarea a realizar</mat-label>
@@ -45,7 +46,22 @@
                 </form>
 
                 <div class="style-button-add">
-                    <button mat-fab extended color="primary" class="boton-agregar" (click)="agregarNuevaTarea()">
+                    <button mat-fab extended [disabled]="otraTareaBoton" color="primary" class="boton-agregar" (click)="crearOtraTarea()">
+                        <mat-icon>add_circle</mat-icon>
+                        Nueva Tarea
+                    </button>
+
+                    <button mat-fab extended [disabled]="eliminarBoton" color="warn" class="boton-agregar" (click)="eliminarLaTarea()">
+                        <mat-icon>delete</mat-icon>
+                        Eliminar
+                    </button>
+
+                    <button mat-fab extended [disabled]="actualizarBoton" color="accent" class="boton-agregar" (click)="modificarTarea()">
+                        <mat-icon>task_alt</mat-icon>
+                        Actualizar
+                    </button>
+
+                    <button mat-fab extended [disabled]="guardarBoton" color="primary" class="boton-agregar" (click)="agregarNuevaTarea()">
                         <mat-icon>task_alt</mat-icon>
                         Agregar
                     </button>

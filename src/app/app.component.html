@@ -1,2 +1,31 @@
-<app-header-nav></app-header-nav>
-<router-outlet />
+<!-- Old nav -->
+<!-- <app-header-nav></app-header-nav> -->
+
+  <!-- Toolbar -->
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="side = !side">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{title}}</span>
+    <mat-icon class="icon-task" aria-hidden="false" aria-label="Example home icon" fontIcon="task"></mat-icon>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="sidenav-container">
+    <!-- Contenedor del sidenav -->
+    <mat-sidenav #sidenav mode="side" [opened]="side">
+      <mat-nav-list>
+        <a [routerLink]="['/mainView']" routerLinkActive="router-link-active" mat-list-item>Home</a>
+        <a [routerLink]="['/crearTarea']" routerLinkActive="router-link-active" mat-list-item>Crear tarea pendiente</a>
+        <a [routerLink]="['/administrarTareas']" routerLinkActive="router-link-active" mat-list-item>Administrar Tareas pendientes</a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+
+      <div class="content">
+        <router-outlet />
+      </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

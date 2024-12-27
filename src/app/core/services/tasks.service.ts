@@ -40,7 +40,7 @@ export class TasksService {
     this.httpClient.delete(`${this.urlBase}/delete-task-id/${id}`);
   }
 
-  public eliminarTaskPorName(name: string): void{
-    this.httpClient.delete(`${this.urlBase}/delete-task-name/${name}`);
+  public eliminarTaskPorName(name: string): Observable<any>{
+    return this.httpClient.delete(`${this.urlBase}/delete-task-name/${name}`);
   }
 }
