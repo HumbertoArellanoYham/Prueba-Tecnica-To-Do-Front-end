@@ -2,15 +2,21 @@
     <div class="col">
         <div class="row contenedor-tareas">
 
+            <div class="mostrarTareas-buton">
+                <button mat-flat-button (click)="lista()" color="primary">Lista de tareas pendientes</button>
+            </div>
+
             <div class="lista-pendientes">
+                @for (taskObjects of listaDeTodasLasTareasPendientes; track $index) {
+
                 <form [formGroup]="modificarTarea">
-                    <mat-expansion-panel>
+                    <mat-expansion-panel class="expansion">
 
                         <mat-expansion-panel-header>
-                            <mat-panel-title> Hacer tarea de la universidad </mat-panel-title>
+                            <mat-panel-title> {{taskObjects.nombre}}</mat-panel-title>
 
                             <mat-panel-description>
-                                 Resolver los 10 ejercicios pendientes de la maestras Elena
+                                 {{taskObjects.description}}
                                 <mat-icon>assignment</mat-icon>
                             </mat-panel-description>
                         </mat-expansion-panel-header>
@@ -25,14 +31,15 @@
                         <mat-divider></mat-divider>
 
                         <div class="task-information">
-                            <p>Tarea activa: 3 dias</p>
-                            <p>Dias para terminar: 5 dias</p>
-                            <p>Dias para completar la tarea: 10 dias</p>
+                            <p>Tarea activa desde: {{taskObjects.fechaInicio}}<p>
+                            <p>Finalización de la tarea: {{taskObjects.fechaFin}}</p>
+                            <p class="completar-dias">Tiempo para completar la tarea:   {{ calcularDiasParaCompletar(taskObjects.fechaInicio, taskObjects.fechaFin) }} dias</p>
                         </div>
 
                     </mat-expansion-panel>
-                </form>
 
+                </form>
+                }
             </div>
             
         </div>
