@@ -79,7 +79,7 @@ tarea a realizar.
   
 Sin embargo se tiene que tomar en cuenta el costo asociado
 
-## Diagrama casos de uso
+## Diagrama casos de uso inicial
 
 ![Screen Shot 2024-12-27 at 2 49 25](https://github.com/user-attachments/assets/f19fdf2a-5552-4e2b-b453-8a8cdf29822b)
 
