@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 // Forms imports 
 import {FormControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -15,6 +16,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
+import {MatListModule} from '@angular/material/list';
+
+// Interfaces
+import {Tareas} from '../../core/interfaces/tareas';
+
+// Services 
+import {TasksService} from '../../core/services/tasks.service';
+
+// Modal alert
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-administrar-tarea',
@@ -32,18 +43,46 @@ import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
     MatButtonModule,
     MatDatepickerModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatListModule,
+    CommonModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './administrar-tarea.component.html',
   styleUrl: './administrar-tarea.component.css'
 })
-export class administrartareacomponent {
+export class administrartareacomponent implements OnInit{
   private formBuilder = inject(FormBuilder);
+
+  listaDeTodasLasTareasPendientes: Tareas[] = []; 
 
   modificarTarea = this.formBuilder.group({
     tareacompletada: [{value: false, disabled: false}],
   });
 
-  constructor() {}
+  constructor(private taskService: TasksService) {}
+
+  ngOnInit(): void {
+    this.taskService.todasLasTareasPendientes().subscribe(itemsTareas => {
+      this.listaDeTodasLasTareasPendientes = itemsTareas;
+      console.log(this.listaDeTodasLasTareasPendientes);
+    })
+  }
+
+  lista(){
+    console.log("Mostrando Lista");
+  }
+
+  // Método para calcular los días entre la fecha de inicio y fin
+  calcularDiasParaCompletar(fechaInicio: string, fechaFin: string): number {
+    const inicio = new Date(fechaInicio);  
+    const fin = new Date(fechaFin); 
+    
+    const diferenciaTiempo = fin.getTime() - inicio.getTime();
+    
+    const dias = diferenciaTiempo / (1000 * 3600 * 24);
+    
+    return dias;  
+  }
+
 }

@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 // Components 
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

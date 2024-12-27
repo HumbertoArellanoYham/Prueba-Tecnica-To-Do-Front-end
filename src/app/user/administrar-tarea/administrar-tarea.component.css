@@ -19,3 +19,11 @@
 .task-information { 
     margin-top: 10px;
 }
+
+.expansion {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.completar-dias{
+    color: blue;
+}
