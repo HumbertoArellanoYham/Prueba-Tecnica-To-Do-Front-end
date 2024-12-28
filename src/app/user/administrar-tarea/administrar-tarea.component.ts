@@ -49,7 +49,7 @@ import Swal from 'sweetalert2';
     CommonModule,
     MatChipsModule
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './administrar-tarea.component.html',
   styleUrl: './administrar-tarea.component.css'
 })
@@ -70,13 +70,6 @@ export class administrartareacomponent implements OnInit{
   lista(){
     console.log("Mostrando Lista");
   } 
-  
-  // Operaciones para las tareas pendientes
-  actualizarTareaCompletada(){
-
-  }
-
-  eliminarTareaPendiente(){}
 
   // Método para calcular los días entre la fecha de inicio y fin
   calcularDiasParaCompletar(fechaInicio: string, fechaFin: string): number {
