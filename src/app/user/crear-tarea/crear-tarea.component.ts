@@ -114,19 +114,31 @@ export class CrearTareaComponent {
         fechaFin: this.nuevaTarea.get('fechafin')?.value || '' 
       }
 
-      this.taskService.guardarTarea(nuevaTareaPendiente).subscribe((task) => {
-        console.log(task);
-      });
+      this.taskService.guardarTarea(nuevaTareaPendiente)
+        .subscribe({
+          next: (item) => {
+
+          Swal.fire({
+            title: 'Excelente!',
+            text: 'Se agrego nueva tarea pendiente',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          });
+
+          },
+          error: (err) => {
+            Swal.fire({
+              title: 'Error!',
+              text: 'No se agrego la tarea',
+              icon: 'error',
+              confirmButtonText: 'Ok'
+            });
+          }
+        });
 
       this.nuevaTarea.reset();
       this.crearOtraTarea();
 
-      Swal.fire({
-        title: 'Excelente!',
-        text: 'Se agrego nueva tarea pendiente',
-        icon: 'success',
-        confirmButtonText: 'Ok'
-      });
     } else {
       Swal.fire({
         title: 'Advertencia!',
@@ -134,6 +146,7 @@ export class CrearTareaComponent {
         icon: 'error',
         confirmButtonText: 'Ok'
       });
+
     }
   }
 
@@ -155,7 +168,12 @@ export class CrearTareaComponent {
             console.log(item, 'Tarea pendiente eliminada');
           },
           error: (err) => {
-            console.error('Error al eliminar la tarea:', err);
+            Swal.fire({
+              title: 'Error!',
+              text: 'No se pudo eliminar la tarea',
+              icon: 'error',
+              confirmButtonText: 'Ok'
+            });
           }
         });
 
@@ -198,8 +216,8 @@ export class CrearTareaComponent {
             console.error('Error al actualizar la tarea:', err);
 
             Swal.fire({
-              title: 'Advertencia!',
-              text: 'Faltan que ingreses campos, intenta de nuevo',
+              title: 'Error!',
+              text: 'No se pudo actualizar la tarea',
               icon: 'error',
               confirmButtonText: 'Ok'
             });
