@@ -38,8 +38,10 @@ y establecer los dias que tengo para esa funcionalidad en especifico.
   * Tiempo para completar la tarea: 1 dia
 
 ## Instrucciones de uso por parte del usuario
-El usuario podra realizar todas las operaciones necesarias para agregar, actualizar, eliminar y buscar las tareas
-pendientes.
+El usuario podra realizar todas las operaciones necesarias para agregar, actualizar, eliminar, buscar las tareas
+pendientes y tambien poder iniciar sesión.
+
+<img width="1262" alt="Screen Shot 2024-12-29 at 3 05 55" src="https://github.com/user-attachments/assets/92598ecd-3dc2-4926-a39a-5928717ee239" />
 
 Tendra un vista principal con un menu lateral muy intuitivo en el cual tendra dos opciones una para agregar una 
 tarea pendiente o para ver la lista de tareas pendientes como se muestra acontinuación:
