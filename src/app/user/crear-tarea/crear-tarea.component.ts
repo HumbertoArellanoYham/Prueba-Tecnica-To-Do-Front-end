@@ -125,6 +125,7 @@ export class CrearTareaComponent {
             confirmButtonText: 'Ok'
           });
 
+          console.log("Se agrego correctamente", item);
           },
           error: (err) => {
             Swal.fire({
