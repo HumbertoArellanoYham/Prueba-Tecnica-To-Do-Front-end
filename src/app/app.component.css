@@ -18,3 +18,17 @@ padding: 16px;
 .icon-task {
     margin-left: 10px;
 }
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    height: 90%; 
+}
+  
+.menu-items {
+flex-grow: 1; 
+}
+
+.bottom-item {
+    margin-bottom: 16px; 
+}

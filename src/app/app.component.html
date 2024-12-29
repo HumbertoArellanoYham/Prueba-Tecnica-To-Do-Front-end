@@ -13,10 +13,15 @@
   <mat-sidenav-container class="sidenav-container">
     <!-- Contenedor del sidenav -->
     <mat-sidenav #sidenav mode="side" [opened]="side">
-      <mat-nav-list>
-        <a [routerLink]="['/mainView']" routerLinkActive="router-link-active" mat-list-item>Home</a>
-        <a [routerLink]="['/crearTarea']" routerLinkActive="router-link-active" mat-list-item>Crear tarea pendiente</a>
-        <a [routerLink]="['/administrarTareas']" routerLinkActive="router-link-active" mat-list-item>Administrar Tareas pendientes</a>
+      <mat-nav-list class="menu-container">
+        <div class="menu-items">
+          <a [routerLink]="['/mainView']" routerLinkActive="router-link-active" mat-list-item>Home</a>
+          <a [routerLink]="['/crearTarea']" routerLinkActive="router-link-active" mat-list-item>Crear tarea pendiente</a>
+          <a [routerLink]="['/administrarTareas']" routerLinkActive="router-link-active" mat-list-item>Administrar Tareas pendientes</a>
+        </div>
+        
+        <a [routerLink]="['/login']" routerLinkActive="router-link-active" mat-list-item class="bottom-item">Iniciar sesión</a>
+
       </mat-nav-list>
     </mat-sidenav>
   
