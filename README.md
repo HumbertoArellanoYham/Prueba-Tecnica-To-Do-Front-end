@@ -73,6 +73,10 @@ Si la ruta no se encuentra o no es la correcta se tiene una vista que lo indique
 
 <img width="1262" alt="Screen Shot 2024-12-29 at 1 29 26" src="https://github.com/user-attachments/assets/803c7ade-0897-49e0-aed9-0e9784b8c075" />
 
+Prevenir el eliminar una tarea pendiente erronea, indispensable cuando presionamos el boton eliminar por equivocación: 
+
+<img width="1262" alt="Screen Shot 2024-12-29 at 3 11 51" src="https://github.com/user-attachments/assets/0ddd90c9-dd5a-4682-b9f4-5d3222926be4" />
+
 
 ## Funcionalidades a tomar en cuenta en un futuro
 ## Lista de tareas segun proceso o proyecto a realizar
