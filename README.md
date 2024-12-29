@@ -17,6 +17,7 @@ se podria hacer sin problema.
           * administrar-tarea
           * crear-tarea
           * dialog-confirm
+          * pagina404
       * core
           * interfaces
               * tareas
@@ -65,6 +66,11 @@ en el formulario antes de realizar cualquier operacion como se muestra aqui:
 <img width="762" alt="Screen Shot 2024-12-27 at 2 37 10" src="https://github.com/user-attachments/assets/7fbe52dd-5781-466a-9ff8-9126f94d5d3a" />
 
 <img width="762" alt="Screen Shot 2024-12-27 at 2 37 38" src="https://github.com/user-attachments/assets/392c2b9e-efb2-4f58-be67-2eabe4a1de72" />
+
+Si la ruta no se encuentra o no es la correcta se tiene una vista que lo indique y se puede redireccionar a la vista principal: 
+
+<img width="1262" alt="Screen Shot 2024-12-29 at 1 29 26" src="https://github.com/user-attachments/assets/803c7ade-0897-49e0-aed9-0e9784b8c075" />
+
 
 ## Funcionalidades a tomar en cuenta en un futuro
 ## Lista de tareas segun proceso o proyecto a realizar
