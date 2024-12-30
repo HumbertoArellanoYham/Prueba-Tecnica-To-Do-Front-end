@@ -8,6 +8,9 @@
     </button>
     <span>{{title}}</span>
     <mat-icon class="icon-task" aria-hidden="false" aria-label="Example home icon" fontIcon="task"></mat-icon>
+    <span class="spacer"></span>
+
+    <span class="usuario">{{ loggedInUser?.usuario || 'Usuario no identificado' }}</span>
   </mat-toolbar>
   
   <mat-sidenav-container class="sidenav-container">
