@@ -47,7 +47,7 @@ pendientes y tambien poder iniciar sesión.
 
 <img width="1262" alt="Screen Shot 2024-12-29 at 3 05 55" src="https://github.com/user-attachments/assets/92598ecd-3dc2-4926-a39a-5928717ee239" />
 
-Cada usuario que ingrese se mostrar su nombre en la parte superior derecha para identificar su uso en la plataforma:
+Cada usuario que ingrese se mostrara su nombre en la parte superior derecha para identificar su uso en la plataforma:
 
 <img width="1264" alt="Screen Shot 2024-12-29 at 17 14 21" src="https://github.com/user-attachments/assets/9d9a05f8-51a5-461e-8159-a82fb304cbf2" />
 
