@@ -32,3 +32,11 @@ flex-grow: 1;
 .bottom-item {
     margin-bottom: 16px; 
 }
+
+.spacer {
+    flex: 1 1 auto; 
+}
+
+.usuario {
+margin-left: auto; 
+}
