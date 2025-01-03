@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, signal, inject, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 // Forms imports 
 import {FormControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -39,7 +39,8 @@ import Swal from 'sweetalert2';
     FormsModule,
     MatCheckboxModule, 
     ReactiveFormsModule,
-    CommonModule
+    CommonModule, 
+    RouterLink
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './login.component.html',
@@ -93,7 +94,6 @@ export class LoginComponent {
           this.userSessionService.setLoggedInUser(this.userLoginFound);
           console.log('Usuario emitido', this.userLoginFound);
           
-
           this.router.navigate(['/mainView']);
         }, 
           error: (err) => {

@@ -33,6 +33,8 @@
                         <mat-checkbox formControlName="checkTerminos">Aceptar terminos y condiciones!</mat-checkbox>
                     </div>
 
+                    <a [routerLink]="['/registrar']" routerLinkActive="router-link-active">Registrar usuario</a>
+
                 </form>
                     <div class="boton-login-div">
                         <button mat-flat-button color="primary" class="boton-login" (click)="ingresar()">Login</button>

@@ -1,1 +1,46 @@
-<p>registrar works!</p>
+<mat-grid-list cols="1" rowHeight="2:1">
+    <mat-grid-tile>
+
+        <mat-card  class="login-card">
+            <mat-card-content>
+                <div class="title">
+                   <h1>Registrar usuario</h1> 
+                   <img src="../../../assets/Images/perfil-del-usuario.png" width="150px" height="150px">
+                </div>
+
+                <form [formGroup]="loginForm" class="form-login">
+                    <mat-form-field class="user-input">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput placeholder="Ingresa el usuario" formControlName="usuario">
+                    </mat-form-field>
+
+                    <mat-form-field class="password-input">
+                        <mat-label>Ingresa la contraseña</mat-label>
+                        <input matInput [type]="hide() ? 'password' : 'text'" formControlName="password"/>
+                        <button
+                          mat-icon-button
+                          matSuffix
+                          (click)="clickEvent($event)"
+                          [attr.aria-label]="'Hide password'"
+                          [attr.aria-pressed]="hide()"
+                        >
+                          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+
+                    </mat-form-field>
+
+                    <div class="check-terminos">
+                        <mat-checkbox formControlName="checkTerminos">Aceptar terminos y condiciones!</mat-checkbox>
+                    </div>
+
+
+                </form>
+                    <div class="boton-login-div">
+                        <button mat-flat-button color="primary" class="boton-login" (click)="registrar()">Registrar</button>
+                    </div>
+
+            </mat-card-content>
+          </mat-card>
+
+    </mat-grid-tile>
+</mat-grid-list>

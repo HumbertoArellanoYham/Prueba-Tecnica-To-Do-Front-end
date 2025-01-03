@@ -1,0 +1,40 @@
+.login-card {
+    width: 30%;
+    height: 73%;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 30px;
+}
+
+.form-login{
+    text-align: center;
+}
+
+.user-input {
+    margin-top: 5%;
+    width: 80%;
+}
+.password-input {
+    width: 80%;
+}
+
+.check-terminos {
+    width: 80%;
+}
+
+.boton-login-div {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.boton-login {
+    
+    width: 80%;
+
+}
