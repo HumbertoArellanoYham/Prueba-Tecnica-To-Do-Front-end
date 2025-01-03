@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, signal, inject, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 // Forms imports 
 import {FormControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -57,7 +58,8 @@ export class LoginComponent {
 
   constructor(
     private userLoginService: UserLoginService,
-    private userSessionService: UserSessionService
+    private userSessionService: UserSessionService,
+    private router: Router
   ){}
 
   ingresar(){
@@ -90,6 +92,9 @@ export class LoginComponent {
           // Enviar el usuario registrado
           this.userSessionService.setLoggedInUser(this.userLoginFound);
           console.log('Usuario emitido', this.userLoginFound);
+          
+
+          this.router.navigate(['/mainView']);
         }, 
           error: (err) => {
             Swal.fire({
