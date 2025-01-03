@@ -4,8 +4,8 @@
         <mat-card  class="login-card">
             <mat-card-content>
                 <div class="title">
-                   <h1>Iniciar Sesión</h1> 
-                   <img src="../../assets/Images/usuario.png" width="150px" height="150px">
+                   <h1>Registrar usuario</h1> 
+                   <img src="../../../assets/Images/perfil-del-usuario.png" width="150px" height="150px">
                 </div>
 
                 <form [formGroup]="loginForm" class="form-login">
@@ -33,11 +33,10 @@
                         <mat-checkbox formControlName="checkTerminos">Aceptar terminos y condiciones!</mat-checkbox>
                     </div>
 
-                    <a [routerLink]="['/registrar']" routerLinkActive="router-link-active">Registrar usuario</a>
 
                 </form>
                     <div class="boton-login-div">
-                        <button mat-flat-button color="primary" class="boton-login" (click)="ingresar()">Login</button>
+                        <button mat-flat-button color="primary" class="boton-login" (click)="registrar()">Registrar</button>
                     </div>
 
             </mat-card-content>

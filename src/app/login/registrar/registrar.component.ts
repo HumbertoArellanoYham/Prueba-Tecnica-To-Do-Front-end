@@ -17,17 +17,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 // Interfaces
-import {UserLogin} from '../core/interfaces/user-login';
+import {UserLogin} from '../../core/interfaces/user-login';
 
 // Services 
-import {UserLoginService} from '../core/services/user-login.service';
-import { UserSessionService } from '../core/services/user-session.service';
+import {UserLoginService} from '../../core/services/user-login.service';
+import { UserSessionService } from '../../core/services/user-session.service';
 
 // Modal alert
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-registrar',
   standalone: true,
   imports: [
     MatGridListModule,
@@ -40,13 +40,13 @@ import Swal from 'sweetalert2';
     MatCheckboxModule, 
     ReactiveFormsModule,
     CommonModule, 
-    RouterLink
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './registrar.component.html',
+  styleUrl: './registrar.component.css'
 })
-export class LoginComponent {
+export class RegistrarComponent {
+
   private formBuilder = inject(FormBuilder);
 
   userLoginFound!: UserLogin;
@@ -59,11 +59,10 @@ export class LoginComponent {
 
   constructor(
     private userLoginService: UserLoginService,
-    private userSessionService: UserSessionService,
     private router: Router
   ){}
 
-  ingresar(){
+  registrar(){
     if(this.loginForm.valid){
 
       const confirmarLogin: UserLogin = {
@@ -72,34 +71,30 @@ export class LoginComponent {
       };
 
 
-      this.userLoginService.seEncuentraRegistrado(confirmarLogin).subscribe({
+      this.userLoginService.crearUsuario(confirmarLogin).subscribe({
         next: (item) => {
           Swal.fire({
             title: 'Excelente!',
-            text: 'Inicio de sesión exitosa',
+            text: 'Se registro correctamente el usuario',
             icon: 'success',
             confirmButtonText: 'Ok'
           });
 
           this.userLoginFound = confirmarLogin;
 
-          console.log("Usuario logueado correctamente", item);
+          console.log("Usuario registrado correctamente", item);
 
           // Reset del formulario y controles
           this.loginForm.reset();
           this.loginForm.markAsPristine();
           this.loginForm.markAsUntouched();
 
-          // Enviar el usuario registrado
-          this.userSessionService.setLoggedInUser(this.userLoginFound);
-          console.log('Usuario emitido', this.userLoginFound);
-          
-          this.router.navigate(['/mainView']);
+          this.router.navigate(['/login']);
         }, 
           error: (err) => {
             Swal.fire({
               title: 'Error!',
-              text: 'Usuario o contraseña incorrectos',
+              text: 'No se registro el usuario, intenta nuevamente!',
               icon: 'error',
               confirmButtonText: 'Ok'
             });
