@@ -45,6 +45,13 @@ y establecer los dias que tengo para esa funcionalidad en especifico.
 
 <img width="890" alt="Screen Shot 2025-01-03 at 19 11 39" src="https://github.com/user-attachments/assets/d5f055cd-f1c8-40bb-89a7-23883471877c" />
 
+El diseño de sistema presentado anteriormente funciona correctamente para la prueba realizada, el usuario ingresa a la aplicación ToDo la petición se manda
+al servidor en donde primero verifica si se encuentra la clave almacenada en redis para hacer la consulta si no es asi, pasa a la base de datos en este 
+caso PostGreSQL se guardan los datos en redis y se manda la respuesta correctamente, la ventaja es la siguiente:   
+
+    *  Al tener redis como almacenamiento en cache las peticiones que se realizen despues seran muy rapidas y no tendran que llegar a la base de 
+      datos y nos ahorramos el coste asociado que cuando son muchos datos el tiempo de respuesta tiene que ser eficiente.
+
 
 ## Instrucciones de uso por parte del usuario
 El usuario podra realizar todas las operaciones necesarias para agregar, actualizar, eliminar, buscar las tareas
