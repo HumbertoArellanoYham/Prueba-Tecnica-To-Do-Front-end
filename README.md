@@ -41,6 +41,11 @@ y establecer los dias que tengo para esa funcionalidad en especifico.
   * Finalizar Tarea: 28/12/24
   * Tiempo para completar la tarea: 1 dia
 
+## Diseño de sistema: proceso para definir la arquitectura
+
+<img width="890" alt="Screen Shot 2025-01-03 at 19 11 39" src="https://github.com/user-attachments/assets/d5f055cd-f1c8-40bb-89a7-23883471877c" />
+
+
 ## Instrucciones de uso por parte del usuario
 El usuario podra realizar todas las operaciones necesarias para agregar, actualizar, eliminar, buscar las tareas
 pendientes y tambien poder iniciar sesión.
