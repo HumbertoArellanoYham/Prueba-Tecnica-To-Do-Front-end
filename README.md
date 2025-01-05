@@ -57,51 +57,52 @@ caso PostGreSQL se guardan los datos en redis y se manda la respuesta correctame
 El usuario podra realizar todas las operaciones necesarias para agregar, actualizar, eliminar, buscar las tareas
 pendientes y tambien poder iniciar sesión.
 
-<img width="1262" alt="Screen Shot 2024-12-29 at 3 05 55" src="https://github.com/user-attachments/assets/92598ecd-3dc2-4926-a39a-5928717ee239" />
+<img width="634" alt="Screen Shot 2025-01-05 at 16 22 32" src="https://github.com/user-attachments/assets/4467fdc2-1cd9-4699-bbb8-238ddc637f63" />
 
-Cada usuario que ingrese se mostrara su nombre en la parte superior derecha para identificar su uso en la plataforma:
+### Cada usuario que ingrese se mostrara su nombre en la parte superior derecha para identificar su uso en la plataforma, al igual que podra registrarse sin problemas:
 
-<img width="1264" alt="Screen Shot 2024-12-29 at 17 14 21" src="https://github.com/user-attachments/assets/9d9a05f8-51a5-461e-8159-a82fb304cbf2" />
+<img width="634" alt="Screen Shot 2025-01-05 at 16 24 19" src="https://github.com/user-attachments/assets/3f016f71-9fd5-45be-8e38-b14af509d323" />
 
-Tendra un vista principal con un menu lateral muy intuitivo en el cual tendra dos opciones una para agregar una 
-tarea pendiente o para ver la lista de tareas pendientes como se muestra acontinuación:
+### Tendra un vista principal con un menu lateral muy intuitivo en el cual tendra dos opciones una para agregar una tarea pendiente o para ver la lista de tareas pendientes como se muestra acontinuación:
 
-<img width="1266" alt="Screen Shot 2024-12-27 at 2 22 14" src="https://github.com/user-attachments/assets/02b630f8-0e38-4754-9412-c086bc851e6e" />
+<img width="634" alt="Screen Shot 2025-01-05 at 16 25 31" src="https://github.com/user-attachments/assets/497f07a1-c06e-468a-a15a-2e352e29ec6f" />
 
-Al hacer click ya sea en el menu o en el boton agregar nueva tarea lo llevara a la vista de agregar tarea pendiente 
-y realizar las operaciones ya mencionadas como tambien si se requiere marcar tarea pendiente como completada:
+Al hacer click ya sea en el menu o en el boton agregar nueva tarea lo llevara a la vista de agregar tarea pendiente y realizar las operaciones ya mencionadas como tambien si se requiere marcar tarea pendiente como completada:
 
-<img width="1266" alt="Screen Shot 2024-12-27 at 2 25 08" src="https://github.com/user-attachments/assets/25bcc34e-666e-4951-8e2e-d4c71f14fe30" />
+<img width="634" alt="Screen Shot 2025-01-05 at 16 26 05" src="https://github.com/user-attachments/assets/e42d948b-59d9-492f-9b87-c943633128b6" />
 
-<img width="1266" alt="Screen Shot 2024-12-27 at 2 26 41" src="https://github.com/user-attachments/assets/17cc7141-2faa-4d65-9646-a847f3840a3c" />
+<img width="634" alt="Screen Shot 2025-01-05 at 16 26 50" src="https://github.com/user-attachments/assets/8db80a47-ca3f-4b07-a760-a59c44b8bde1" />
+
 
 Por ultimo tenemos la vista de la lista de todas las tareas pendientes que tenemos con sus detalles aqui podra ver
 el usuario cuales a completado y cuales no o los dias que tiene para cada una:
 
-<img width="1266" alt="Screen Shot 2024-12-27 at 2 30 48" src="https://github.com/user-attachments/assets/392585e9-7db0-4b52-bf58-fa82504a3ec1" />
+<img width="634" alt="Screen Shot 2025-01-05 at 16 39 58" src="https://github.com/user-attachments/assets/adbc4c8b-de9f-4ce0-9292-f12dd242cbf4" />
 
 ## Manejo de errores y validación de datos
 El manejo de errores es fundamental para prevenir ejecuciones no deseadas, aqui se validan tanto los datos 
 que llegan de la API REST con Spring boot y los que se envian desde el frontend empezando por validar los datos
 en el formulario antes de realizar cualquier operacion como se muestra aqui:
 
-<img width="762" alt="Screen Shot 2024-12-27 at 2 37 10" src="https://github.com/user-attachments/assets/7fbe52dd-5781-466a-9ff8-9126f94d5d3a" />
+<img width="1263" alt="Screen Shot 2025-01-05 at 16 50 46" src="https://github.com/user-attachments/assets/48b168af-4b1f-4d73-9567-35441400f8e1" />
 
-<img width="762" alt="Screen Shot 2024-12-27 at 2 37 38" src="https://github.com/user-attachments/assets/392c2b9e-efb2-4f58-be67-2eabe4a1de72" />
+<img width="1263" alt="Screen Shot 2025-01-05 at 16 51 42" src="https://github.com/user-attachments/assets/2aade0b1-ab48-440b-bc5c-a0be510b07f5" />
 
-Si la ruta no se encuentra o no es la correcta se tiene una vista que lo indique y se puede redireccionar a la vista principal: 
 
-<img width="1262" alt="Screen Shot 2024-12-29 at 1 29 26" src="https://github.com/user-attachments/assets/803c7ade-0897-49e0-aed9-0e9784b8c075" />
+### Si la ruta no se encuentra o no es la correcta se tiene una vista que lo indique y se puede redireccionar a la vista principal: 
 
-Prevenir el eliminar una tarea pendiente erronea, indispensable cuando presionamos el boton eliminar por equivocación: 
+<img width="634" alt="Screen Shot 2025-01-05 at 16 42 42" src="https://github.com/user-attachments/assets/cc5027d0-d3ca-467a-8075-2a7217fc1c61" />
 
-<img width="1262" alt="Screen Shot 2024-12-29 at 3 11 51" src="https://github.com/user-attachments/assets/0ddd90c9-dd5a-4682-b9f4-5d3222926be4" />
+### Prevenir el eliminar una tarea pendiente erronea, indispensable cuando presionamos el boton eliminar por equivocación: 
 
+<img width="1263" alt="Screen Shot 2025-01-05 at 16 52 18" src="https://github.com/user-attachments/assets/7bce0449-9864-47b6-88ad-896d40624e3a" />
 
 ## Funcionalidades a tomar en cuenta en un futuro
-## Lista de tareas segun proceso o proyecto a realizar
+### Lista de tareas segun proceso o proyecto a realizar
 * Esta funcionalidad nos permite agregar mas proyectos segun lo requiera ya sea en un equipo de trabajo o cualquier
 tarea a realizar.
+
+<img width="401" alt="Screen Shot 2025-01-05 at 16 43 59" src="https://github.com/user-attachments/assets/55dc0833-9ea5-4589-8f2e-3974f85cee1e" />
 
 ## Despliegue en AWS
 * Dentro de la nube de amazon web services nos proporciona diferentes servicios para desplegar como lo son:
